@@ -2,24 +2,31 @@
 <html lang="en-US">
 
 <head>
-  <title>TRIPS | An Interactive System for Translating Raw Indoor Positioning Data into Visual Mobility
+  <title>TRIPS | A System for Translating Raw Indoor Positioning Data into Visual Mobility
     Semantics</title>
   <meta
     name="description"
-    content="An Interactive System for Translating Raw Indoor Positioning Data into Visual Mobility Semantics">
+    content="A System for Translating Raw Indoor Positioning Data into Visual Mobility Semantics">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#157878">
   <link href="static/index.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="./static/style.css">
+  <style>
+    .date {
+      display: inline-block;
+      width: 150px;
+    }
+  </style>
 </head>
 
 <body>
 <section class="page-header">
   <h1 class="project-name">TRIPS</h1>
-  <h2 class="project-tagline">An Interactive System for Translating Raw Indoor Positioning Data into Visual
+  <h2 class="project-tagline">A System for Translating Raw Indoor Positioning Data into Visual
     Mobility Semantics</h2>
-  <a href="https://github.com/shinima/trips" class="btn">View on GitHub</a>
-
+  <a href="http://shinima.pw/editor/" class="btn" target=_blank>Space Modeler Applet</a>
+  <a href="http://shinima.pw/viewer/" class="btn" target=_blank>Viewer Applet</a>
+  <p style="margin: 0; font-size: 85%; font-style: italic; opacity: 0.7">The applets incorporate sample data for online experience</p>
 </section>
 
 <section class="main-content">
@@ -27,70 +34,66 @@
     style="margin: auto; display: block;"
     width="800"
     height="450"
-    src="https://www.youtube.com/embed/BUmspWKUotI?rel=0"
+    src="https://www.youtube.com/embed/dERSHqp7lpM?rel=0"
     frameborder="0"
     allow="autoplay; encrypted-media"
     allowfullscreen></iframe>
 
+  <h2 id="trips">TRIPS</h2>
+
+  <p>
+    The rapid accumulation of indoor positioning data is increasingly booming the interest in indoor mobility analyses.
+    As a fundamental analysis, it is highly relevant to translate raw indoor positioning data into mobility semantics
+    that describe what, where and when in a more concise and semantics-oriented way.
+    Such a translation is challenging as multiple data sources are involved, the raw indoor positioning data is of low
+    quality, and the translation results are hard to assess.
+  </p>
+  <p>
+    We design a system <b>TRIPS</b> that <u>T</u>ranslates <u>R</u>aw <u>I</u>ndoor <u>P</u>ositioning
+    data into mobility <u>S</u>emantics.
+    The system streamlines the entire translation process by three functional components.
+  </p>
+  <ul>
+    <li>
+      <i>The Configurator</i> provides a standard but concise means to configure multiple input sources, including
+      the indoor positioning data, indoor space information, and relevant context.
+    </li>
+    <li>
+      <i>The Translator</i> cleans the indoor positioning data and exports reliable mobility semantics without manual
+      interventions.
+    </li>
+    <li>
+      <i>The Viewer</i> offers a suite of flexible operations to trace the input, output and intermediate data
+      involved in
+      the translation.
+    </li>
+  </ul>
+  Data analysts can interact with TRIPS to obtain their desired mobility semantics in a visual and convenient way.
+
+  <img src="./static/architecture.png"
+       alt="System Architecture"
+       style="max-width: 90%; margin: auto; display: block; margin-top: 1rem;">
+  <p style="text-align: center; margin-top: 0.5em;">System Architecture</p>
+
   <h2 id="news">News</h2>
   <ul>
     <li>
-      <em>Feb 27, 2018</em> A demonstration paper of this project is submitted to
+      <em class="date">Mar 1, 2018</em> A demo paper and a research paper have been submitted to
       <a href="http://shinima.pw/trips/vldb2018.lncc.br">VLDB 2018</a>.
     </li>
     <li>
-      <em>Jan 11, 2018</em> The
-      <em>Space Modeler</em> component is open source on
+      <em class="date">Feb 25, 2018</em> The core techniques of <i>the Translator</i> have been published
+      <a href="#">online</a>.
+    </li>
+    <li>
+      <em class="date">Jan 11, 2018</em> The
+      <em>Space Modeler</em> module has been open-sourced on
       <a href="https://github.com/shinima/editor">GitHub</a>.
     </li>
     <li>
-      <em>Jan 1, 2018</em> The
-      <em>Viewer</em> component is open source on
+      <em class="date">Jan 1, 2018</em> The
+      <em>Viewer</em> module has been open-sourced on
       <a href="https://github.com/shinima/viewer">Github</a>.
-    </li>
-  </ul>
-
-  <h2 id="trips">TRIPS</h2>
-
-  <p>The rapid accumulation of indoor positioning data is increasingly booming the interest in indoor mobility analyses.
-    As
-    a fundamental analysis, it is highly relevant to translate raw indoor positioning data into mobility semantics that
-    describe what, where and when in a more concise and semantics-oriented way. Such a translation is challenging as
-    multiple
-    data sources are involved, the raw indoor positioning data is of low quality, and the translation results are hard
-    to assess. In this work, we demonstrate a system TRIPS that streamlines the entire translation process by three
-    functional
-    components. The Configurator provides a standard but concise means to configure multiple input sources, including
-    the
-    indoor positioning data, indoor space information, and relevant context. The Translator cleans the indoor
-    positioning
-    data and exports reliable mobility semantics without manual interventions. The Viewer offers a suite of flexible
-    operations
-    to trace the input, output and intermediate data involved in the translation. Data analysts can interact with TRIPS
-    to obtain their desired mobility semantics in a visual and convenient way.</p>
-
-  <h2 id="features">Features</h2>
-
-  <p>We design a system named TRIPS. It provides an end-to-end solution to translate the raw indoor positioning data
-    into
-    the visual mobility semantics in support of the semanticsoriented indoor mobility analysis. In general, TRIPS is
-    characterized
-    by several desirable features:</p>
-
-  <ul>
-    <li>It provides a concise, labor-saving manner to set up positioning data source and manage contextual resources,
-      making
-      it highly convenient to arrange the input data sources.
-    </li>
-    <li>It adopts a three-layer translation framework to deal with the inherent discreteness and uncertainty in the raw
-      indoor
-      positioning data. The techniques in the cleaning layer, annotation layer and complementing layer help export
-      reliable
-      mobility semantics jointly.
-    </li>
-    <li>It offers a suite of flexible interactions to visually trace the input, output, and intermediate data at the
-      same time,
-      which is very intuitive for users to verify the translation results.
     </li>
   </ul>
 
