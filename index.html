@@ -44,33 +44,38 @@
   <h2 id="trips">TRIPS</h2>
 
   <p>
-    The rapid accumulation of indoor positioning data is increasingly booming the interest in indoor mobility analyses.
-    As a fundamental analysis, it is highly relevant to translate raw indoor positioning data into mobility semantics
-    that describe what, where and when in a more concise and semantics-oriented way.
-    Such a translation is challenging as multiple data sources are involved, the raw indoor positioning data is of low
-    quality, and the translation results are hard to assess.
+	The rapid accumulation of indoor positioning data is increasingly booming the interest in indoor mobility analyses.
+	As a fundamental analysis, it is highly relevant to translate raw indoor positioning data into mobility semantics that describe what, where and when in a more concise and semantics-oriented way.
+	Such a translation is challenging in several aspects:
+	<ul>
+    <li>
+      The translation involves the data from multi-sources, including the indoor positioning data, the indoor space information and the relevant indoor contexts. It is a laborious task to set up those data sources for a specific data analysis.
+    </li>
+    <li>
+      The translation relies heavily on the quality of the raw indoor positioning data that, however, is uncertain and discrete in nature due to the limitations of indoor positioning. Considerable efforts are needed to improve the data quality before the proper mobility semantics can be determined from the data.
+    </li>
+    <li>
+      The translation result needs to be assessed properly. It is useful to compare the resultant mobility semantics to the corresponding raw positioning records. However, such a comparison is difficult due to the large gap between these two kinds of representations.
+    </li>
+  </ul>
   </p>
   <p>
-    We design a system <b>TRIPS</b> that <u>T</u>ranslates <u>R</u>aw <u>I</u>ndoor <u>P</u>ositioning
+    To address these challenges, we design a system <b>TRIPS</b> that <u>T</u>ranslates <u>R</u>aw <u>I</u>ndoor <u>P</u>ositioning
     data into mobility <u>S</u>emantics.
     The system streamlines the entire translation process by three functional components.
   </p>
   <ul>
     <li>
-      <i>The Configurator</i> provides a standard but concise means to configure multiple input sources, including
-      the indoor positioning data, indoor space information, and relevant context.
+      <i>The Configurator</i> provides a standard but concise means to configure multiple input sources, including raw indoor positioning data, indoor space information and relevant contexts.
     </li>
     <li>
-      <i>The Translator</i> cleans the indoor positioning data and exports reliable mobility semantics without manual
-      interventions.
+      <i>The Translator</i> incorporates a translator that is able to clean raw indoor positioning data and translate the data into reliable mobility semantics without manual interventions.
     </li>
     <li>
-      <i>The Viewer</i> offers a suite of flexible operations to trace the input, output and intermediate data
-      involved in
-      the translation.
+      <i>The Viewer</i> offers a suite of flexible interactions to visually trace the input, output and intermediate data involved in the translation, making it intuitive to assess the translation result.
     </li>
   </ul>
-  Data analysts can interact with TRIPS to obtain their desired mobility semantics in a visual and convenient way.
+  Data analysts can interact with TRIPS to obtain the desired mobility semantics in a visual and convenient way.
 
   <img src="./static/architecture.png"
        alt="System Architecture"
@@ -85,7 +90,7 @@
     </li>
     <li>
       <em class="date">Feb 25, 2018</em> The core techniques of <i>the Translator</i> have been published
-      <a href="static/semTraj-indoo_p13.pdf" target=_blank>online</a>.
+      <a href="static/semTraj-indoor_p13.pdf" target=_blank>online</a>.
     </li>
     <li>
       <em class="date">Jan 11, 2018</em> The
@@ -101,14 +106,14 @@
 
   <h2 id="authors">Authors and Contributors</h2>
   <ul>
-    <li><a href="http://db.zju.edu.cn/s/people_detail?id=105" target="_blank">Huan Li</a>, Zhejiang University,
+    <li><a href="https://longaspire.com" target="_blank">Huan Li</a>, Zhejiang University,
       China
     </li>
     <li><a href="http://people.cs.aau.dk/~luhua/" target="_blank">Hua Lu</a>, Aalborg University, Denmark</li>
     <li><a href="http://shinima.pw" target="_blank">Feichao Shi</a>, Zhejiang University,
       China
     </li>
-    <li>Qinkuang Chen, Zhejiang University, China</li>
+    <li><a href="https://github.com/yysys" target="_blank">Qinkuang Chen</a>, Zhejiang University, China</li>
     <li><a href="http://db.zju.edu.cn/s/people_detail?id=1" target="_blank">Gang Chen</a>, Zhejiang University,
       China
     </li>
@@ -118,6 +123,10 @@
       China
     </li>
   </ul>
+  <p>
+  Please feel free to <b><a href="mailto:lihuancs@zju.edu.cn">contact us</a></b> if you have any questions and/or suggestions. 
+  You are welcome to contribute to TRIPS, to make it better :)
+  </p>
 
   <footer class="site-footer">
     <span class="site-footer-credits">
